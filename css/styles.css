@@ -17,8 +17,106 @@ html, body {
 }
 
 body {
+    background-color: var(--pale-blue);
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
+}
+
+/* COMMON FONT STYLE */
+article > .article-title,
+.price > .plan-title {
+    font-family: 'RedHatDisplay-Black';
+}
+
+article > .article-description,
+.price > .plan-amount  {
+    font-family: 'RedHatDisplay-Medium';
+}
+
+/* MAIN */
+main {
+    width: 100%;
+}
+
+/* CONTENT-BOX */
+.content-box {
+    width: 325px;
+    height: 570px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+/* HERO IMAGE */
+.content-box > .hero-image {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+/* ARTICLE */
+article {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+article > .article-title {
+    font-size: 1.5rem;
+}
+
+article > .article-description {
+    color: var(--desaturated-blue);
+    line-height: 25px;
+}
+
+/* SECTION */
+section {
+    width: 245px;
+    height: 60px;
+    padding: 10px;
+    margin: 10px auto 10px;
+    background-color: var(--very-pale-blue);
+    border-radius: inherit;
+    display: grid;
+    grid-template-columns: 50px 140px 50px;
+}
+
+section > .price,
+section > .icon-image,
+section > .change-link {
+    margin: auto;
+}
+
+/* PRICE */
+section > .price > p {
+    margin: 0;
+}
+
+.price > .plan-title,
+.price > .plan-amount {
+    font-size: 0.85rem;
+}
+
+/* CHANGE LINK */
+section > .change-link {
+    font-family: 'RedHatDisplay-Bold';
+    font-size: 0.75rem;
+}
+
+/* BUTTONS */
+.payment-button,
+.cancel-button {
+    width: 280px;
+    height: 50px;
+    margin: 10px auto;
+    font-family: 'RedHatDisplay-Bold';
+    border-radius: inherit;
 }
