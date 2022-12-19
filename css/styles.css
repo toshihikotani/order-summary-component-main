@@ -17,6 +17,7 @@ html, body {
 }
 
 body {
+    background: url('../images/pattern-background-mobile.svg') no-repeat center top ;
     background-color: var(--pale-blue);
     margin: 0;
     padding: 0;
@@ -77,8 +78,8 @@ article > .article-description {
     line-height: 25px;
 }
 
-/* SECTION */
-section {
+/* PRICE SECTION */
+.price-box {
     width: 245px;
     height: 60px;
     padding: 10px;
@@ -86,17 +87,17 @@ section {
     background-color: var(--very-pale-blue);
     border-radius: inherit;
     display: grid;
-    grid-template-columns: 50px 140px 50px;
+    grid-template-columns: 10% 70% 20%;
 }
 
-section > .price,
-section > .icon-image,
-section > .change-link {
+.price-box > .price,
+.price-box  > .icon-image,
+.price-box  > .change-link {
     margin: auto;
 }
 
 /* PRICE */
-section > .price > p {
+.price-box  > .price > p {
     margin: 0;
 }
 
@@ -106,9 +107,18 @@ section > .price > p {
 }
 
 /* CHANGE LINK */
-section > .change-link {
+.price-box  > .change-link {
     font-family: 'RedHatDisplay-Bold';
     font-size: 0.75rem;
+}
+
+.price-box  > .change-link > a {
+    color: var(--bright-blue);
+}
+
+.price-box  > .change-link > a:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* BUTTONS */
@@ -116,7 +126,91 @@ section > .change-link {
 .cancel-button {
     width: 280px;
     height: 50px;
-    margin: 10px auto;
+    margin: 10px auto 0px;
     font-family: 'RedHatDisplay-Bold';
+    font-size: 0.95em;
     border-radius: inherit;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.payment-button {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0px 12px 5px 1px var(--pale-blue);
+}
+
+.payment-button:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+}
+
+.cancel-button:hover {
+    color: var(--dark-blue);
+}
+
+/* PORTRAIT TABLET */
+@media only screen and (min-width:600px) {
+}
+
+/* LANDSCAPE TABLET */
+@media only screen and (min-width:768px) {
+
+    body {
+        background: url('../images/pattern-background-desktop.svg') no-repeat center top;
+        background-color: var(--pale-blue);
+    }
+
+    /* CONTENT-BOX */
+    .content-box {
+        width: 450px;
+        height: 695px;
+    }
+
+    article > .article-title {
+        font-size: 1.75rem;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+
+    /* PRICE SECTION */
+    .price-box {
+        width: 355px;
+        height: 95px;
+        margin: 10px auto 20px;
+        padding: 0px;
+        grid-template-columns: 25% 30% 60%;
+    }
+
+    .price > .plan-title,
+    .price > .plan-amount {
+        font-size: 1rem;
+    }
+
+    /* CHANGE LINK */
+    .price-box  > .change-link {
+        font-size: 0.85rem;
+    }
+
+    /* BUTTONS */
+    .payment-button,
+    .cancel-button {
+        width: 355px;
+        margin: 8px auto 10px;
+    }
+
+}
+
+/* LAPTOP/DESKTOP */
+@media only screen and (min-width:992px) {
+    
+}
+
+/* LARGE LAPTOP/DESKTOP */
+@media only screen and (min-width:1200px) {
+    
 }
